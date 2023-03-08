@@ -5,16 +5,108 @@
 </ion-header>
 
 <ion-content>
-  <ion-refresher slot="fixed" (ionRefresh)="autorefresh($event)">
-    <ion-refresher-content  refreshingSpinner="circles" refreshingText="Refreshing..">
 
+
+  <div class="circle-container">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+  </div>
+  <ion-refresher slot="fixed" (ionRefresh)="autorefresh($event)">
+    <ion-refresher-content refreshingSpinner="circles" refreshingText="Refreshing..">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-card-title>We just want few informtion to get yourself Registered  </ion-card-title>
+ 
+  <div class="container" style="margin-top: 10rem;">
+    <h6 style="margin-left: 1rem;">We just want few informtion to get yourself Registered </h6>
+    <h1 style="margin-left: 20px; margin-top: 1rem;">Sign Up As:</h1>
+    <div>
+      <input type="radio" name="payment" id="card" (change)="out('Shipper')">
+      <label for="card">
 
-  <h1 style="margin-left: 20px;">Sign Up As:</h1>
+        <div class="imgdiv">
+          <img
+            src="https://images.all-free-download.com/images/graphiclarge/shipper_conception_painting_delivery_man_icon_cartoon_character_6840190.jpg"
+            style="width: 65px; height:65px; border-radius:50%;">
+        </div>
 
- <!--<ion-card>
+        <div class="shipperdiv">
+          SHIPPER
+        </div>
+
+      </label>
+    </div>
+
+    <div>
+      <input type="radio" name="payment" id="cash" (change)="out('Fleet Owner')">
+      <label for="cash">
+        <div class="imgdiv">
+          <img
+            src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/partners/owner_banner-54b9b6782f153807bff15a9a99b323d4580b76636f981cfc171a4e801ca00041.png"
+            style="width: 65px; height:65px; border-radius:50%;">
+        </div>
+
+        <div class="shipperdiv">
+          FLEET OWNER
+        </div>
+      </label>
+    </div>
+
+
+
+    <div>
+      <input type="radio" name="payment" id="csh" (change)="out('Transporter')">
+      <label for="csh">
+        <div class="imgdiv">
+          <img
+            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/delivery-man-waving-driving-van-cartoon-aloysius-patrimonio.jpg"
+            style="width: 65px; height:65px; border-radius:50%;">
+        </div>
+
+        <div class="shipperdiv">
+          TRANSPORTER
+        </div>
+      </label>
+    </div>
+
+    <div>
+      <input type="radio" name="payment" id="ash" (change)="out('Agent/Broker')">
+      <label for="ash">
+        <div class="imgdiv">
+          <img src="https://www.insurercore.com/insurercore2018/assets/images/broker-header-2.png"
+            style="width: 65px; height:65px; border-radius:50%;">
+        </div>
+
+        <div class="shipperdiv">
+          AGENT/BROKER
+        </div>
+      </label>
+    </div>
+    <p>A shipper is the person or company who owns or overseas goods or products for transport from one location to another</p>
+  </div>
+
+</ion-content>
+<!--<p style="font-size: 12px;">A shipper is the person or company who owns or oversees 
+  goods or products for transport from one location to another.</p>-->
+
+
+<ion-button color="#a13cd7;" [disabled]="type == null" (click)="selectType()">Continue</ion-button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ion-card>
     <div class="imgdiv">
       <img src="https://images.all-free-download.com/images/graphiclarge/shipper_conception_painting_delivery_man_icon_cartoon_character_6840190.jpg" style="width: 65px; height:65px; border-radius:50%;">
     </div>
@@ -53,71 +145,3 @@
       AGENT/BROKER
     </div>
   </ion-card>-->
-
-
-
-  
-
-    <div>
-    <input type="radio" name="payment" id="card" (change)="out('Shipper')">
-    <label for="card">
-      
-        <div class="imgdiv">
-          <img src="https://images.all-free-download.com/images/graphiclarge/shipper_conception_painting_delivery_man_icon_cartoon_character_6840190.jpg" style="width: 65px; height:65px; border-radius:50%;">
-        </div>
-      
-        <div class="shipperdiv">
-          SHIPPER
-        </div>
-      
-    </label>
-    </div>
-    
-    <div>
-    <input type="radio" name="payment" id="cash" (change)="out('Fleet Owner')">
-    <label for="cash">
-      <div class="imgdiv">
-        <img src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/partners/owner_banner-54b9b6782f153807bff15a9a99b323d4580b76636f981cfc171a4e801ca00041.png" style="width: 65px; height:65px; border-radius:50%;">
-      </div>
-    
-      <div class="shipperdiv">
-      FLEET OWNER
-      </div>
-    </label>
-    </div>
-    
-
-    
-        <div>
-          <input type="radio" name="payment" id="csh" (change)="out('Transporter')">
-          <label for="csh">
-            <div class="imgdiv">
-              <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/delivery-man-waving-driving-van-cartoon-aloysius-patrimonio.jpg" style="width: 65px; height:65px; border-radius:50%;">
-            </div>
-          
-            <div class="shipperdiv">
-              TRANSPORTER
-            </div>
-          </label>
-          </div>
-    
-          <div>
-            <input type="radio" name="payment" id="ash" (change)="out('Agent/Broker')">
-            <label for="ash">
-              <div class="imgdiv">
-                <img src="https://www.insurercore.com/insurercore2018/assets/images/broker-header-2.png" style="width: 65px; height:65px; border-radius:50%;">
-              </div>
-            
-              <div class="shipperdiv">
-                AGENT/BROKER
-              </div>
-            </label>
-            </div>
-    
-
-</ion-content>
-<!--<p style="font-size: 12px;">A shipper is the person or company who owns or oversees 
-  goods or products for transport from one location to another.</p>-->
-  <ion-button color="#a13cd7;"  [disabled]="type == null" (click)="selectType()" >Continue</ion-button>
-
-

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    
+
     <ion-title>
       <ion-icon name="arrow-back-outline" routerLink="/loginotp"></ion-icon>
     </ion-title>
@@ -12,57 +12,49 @@
 
 <ion-content class="ion-padding ion-text-center">
 
-  <div class="app">
-    <img src="assets/trucklogo.jpeg">
-   </div>
-
-
- <div class="content">
-<h3 style="margin-top: 100px;">Verification</h3>
-<p>
-  Enter the One Time Password send to {{mobileNo}}
-</p>
-
-
-<!--<ion-grid class="inputs">
-  <ion-row>
-    <ion-col size="2">
-    <input type="text" value={{otp.substring(0,1)}} id="ip1" [(ngModel)]="one" [ngModelOptions]="{standalone: true}">
-    </ion-col>
-    <ion-col size="2">
-      <input type="text" value={{otp.substring(1,2)}} readonly id="ip2">
-      </ion-col>
-      <ion-col size="2">
-        <input type="text" value={{otp.substring(2,3)}} readonly id="ip3">
-        </ion-col>
-        <ion-col size="2">
-          <input type="text" value={{otp.substring(3,4)}} readonly id="ip4">
-          </ion-col>
-          <ion-col size="2">
-            <input type="text" value={{otp.substring(4,5)}} readonly id="ip5">
-            </ion-col>
-            <ion-col size="2">
-              <input type="text" value={{otp.substring(5,6)}} readonly id="ip6">
-              </ion-col>
-    
-  </ion-row>
-</ion-grid>-->
-
-<ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
-    
-
-<br>
-<ion-note>
-  Didn't receive OTP?
-  <ion-text color="dark" style="font-weight: 600;">Resend OTP</ion-text>
-</ion-note>
-
-</div>
-
-<div class="spinner" *ngIf="spin" style="size: 1;">
-  <ion-spinner name="bubbles"></ion-spinner>
+  <div class="circle-container">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
   </div>
+
+  <div class="logo">
+    <ion-img src="assets/trucklogo.jpeg"></ion-img>
+  </div>
+
+  <h1 style="color:#f58e26; margin-left: -8rem;">Login/SignUp</h1>
+
+
+  <div class="content">
+    <p style="margin-top: 2rem;"> Enter the One Time Password to send you <br>{{mobileNo}} <u style="color: blue;">Edit</u></p>
   
+
+
+
+    <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+
+
+    <br>
+    <ion-note>
+      Didn't receive OTP?
+      <ion-text  style="font-weight: 600; color: blue;">Resend OTP</ion-text>
+    </ion-note>
+
+  </div>
+
+  <div class="spinner" *ngIf="spin" style="size: 1;">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+
+
+
+</ion-content>
+<ion-button style="height:50px;" (click)="handleClick()">Verify OTP</ion-button>
+
+
+
+
+
+
 
 <!--<div class="keypad">
 <ion-grid class="buttons"  >
@@ -106,5 +98,30 @@
 </ion-row>
 </ion-grid>
 </div>-->
-</ion-content>
-<ion-button style="height:50px;"  (click)="handleClick()" >Verify OTP</ion-button>
+
+
+
+
+<!--<ion-grid class="inputs">
+   <ion-row>
+    <ion-col size="2">
+    <input type="text" value={{otp.substring(0,1)}} id="ip1" [(ngModel)]="one" [ngModelOptions]="{standalone: true}">
+    </ion-col>
+    <ion-col size="2">
+      <input type="text" value={{otp.substring(1,2)}} readonly id="ip2">
+      </ion-col>
+      <ion-col size="2">
+        <input type="text" value={{otp.substring(2,3)}} readonly id="ip3">
+        </ion-col>
+        <ion-col size="2">
+          <input type="text" value={{otp.substring(3,4)}} readonly id="ip4">
+          </ion-col>
+          <ion-col size="2">
+            <input type="text" value={{otp.substring(4,5)}} readonly id="ip5">
+            </ion-col>
+            <ion-col size="2">
+              <input type="text" value={{otp.substring(5,6)}} readonly id="ip6">
+              </ion-col>
+    
+   </ion-row>
+   </ion-grid>-->

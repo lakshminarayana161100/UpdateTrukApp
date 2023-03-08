@@ -1,5 +1,3 @@
-
-
 <ion-header>
   <ion-toolbar>
     <div style="display: flex;">
@@ -10,41 +8,55 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h1>Welcome,</h1>
-  <h3>Enter mobile number to continue!</h3>
+  <div class="circle-container">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+  </div>
 
-  <div>
+  <div class="logo">
     <ion-img src="assets/trucklogo.jpeg"></ion-img>
-   </div>
+  </div>
+
+  <h1 style="color:#f58e26; margin-left: 1rem;">Login/SignUp</h1>
   <form>
-    &nbsp;&nbsp;<ion-label>Enter Your Mobile Number</ion-label><br>
-   
+    &nbsp;&nbsp;<ion-label>Enter Your WhatsApp Mobile Number</ion-label><br>
+
     <ion-item class="ion-margin">
-      <ion-input  type="number"   clearInput="true" placeholder="Enter Mobile Number" [(ngModel)]="phoneNumber" min="10" [ngModelOptions]="{standalone: true}" pattern="^((\\+91-?)|0)?[0-9]{10}$"></ion-input>
+      <ion-input type="number" clearInput="true" placeholder="Enter Mobile Number" [(ngModel)]="phoneNumber" min="10"
+        [ngModelOptions]="{standalone: true}" pattern="^((\\+91-?)|0)?[0-9]{10}$"></ion-input>
     </ion-item>
     <br>
-    <ion-label style="margin-left: 38px;"> Don't have an Account ? <span routerLink="/selecttype" style="font-size: 20px;color:rgb(245, 129, 75);"><u>Signup</u></span></ion-label>
-  
-    
-  
-<div class="genotp">
-    <ion-button class="btn" color="#a13cd7;" [disabled]="phoneNumber == null"  (click)="getOTP()">Generate OTP</ion-button>
+     <ion-label style="margin-left: 38px;"> Don't have an Account ? <span routerLink="/selecttype"
+        style="font-size: 20px;color:rgb(245, 129, 75);"><u>Signup</u></span></ion-label> 
+
+<!--       
+        <h4 style="text-align: center;" routerLink="/selecttype">Don't have an account ?<u style="color: blue;" >SignUp</u></h4> -->
+
+    <!-- <div class="genotp">
+      <ion-button class="btn" color="#a13cd7;" [disabled]="phoneNumber == null" (click)="getOTP()">Generate
+        OTP</ion-button>
     </div>
-    <div id="sign-in-button"></div>
-    
+    <div id="sign-in-button"></div> -->
 
 
 
-    
+
+
   </form>
 
-  
+
   <!--<div class="spinner" *ngIf="!spin" style="size: 1;">
     <ion-spinner name="bubbles"></ion-spinner>
     </div>-->
 </ion-content>
 
 
+<div class="container">
+  <div class="form-group form-check ">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1"  style="margin-left: 0.5rem;">
+    <label class="form-check-label" for="exampleCheck1" style="margin-left: 2rem;"> By Signing up,you accept our<u>T&C</u>and privacy policy</label>
+  </div>
+  </div>
+<br>
 
-<!---->
-
+    <ion-button class="btn" color="#a13cd7;" [disabled]="phoneNumber == null" (click)="getOTP()">GenerateOTP</ion-button>

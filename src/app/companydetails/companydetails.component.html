@@ -4,52 +4,51 @@
 
 <form  class="ion-margin">
   
-  <div class="ion-margin-vertical">
+
    
-    <ion-item >
+    <ion-item fill="outline">
+      <ion-label position="floating">Enter FirstName</ion-label>
       <ion-input placeholder="Enter FirstName" type="text" clearInput="true" [(ngModel)]="FirstName" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
-  
-  </div> 
-  <div class="ion-margin-vertical">
+
+<br>
    
-    <ion-item >
+    <ion-item fill="outline">
+      <ion-label position="floating">Enter LastName</ion-label>
       <ion-input placeholder="Enter LastName" type="text" clearInput="true" [(ngModel)]="LastName" [ngModelOptions]="{standalone: true}"  ></ion-input>
     </ion-item>
-  
-  </div>
-
-  <div class="ion-margin-vertical">
+<br>
    
-    <ion-item >
+    <ion-item fill="outline">
+      <ion-label position="floating">Enter City</ion-label>
       <ion-input placeholder="Enter City" type="text" clearInput="true" [(ngModel)]="city" [ngModelOptions]="{standalone: true}"  ></ion-input>
     </ion-item>
-  
-  </div>
 
-  <div class="ion-margin-vertical">
-   
-    <ion-item >
+<br>
+    <ion-item fill="outline">
+      <ion-label position="floating">Enter CompanyName</ion-label>
       <ion-input placeholder="Enter CompanyName" type="text" clearInput="true" [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}"  ></ion-input>
     </ion-item>
-  
-  </div>
-
-  <div class="ion-margin-vertical">
+<br>
    
-    <ion-item >
+    <ion-item fill="outline">
+      <ion-label position="floating">Referal Code(optional)"</ion-label>
       <ion-input placeholder="Referal Code(optional)" type="text" clearInput="true" [(ngModel)]="ReferalCode" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
   
-  </div>
-
+<br>
+<ion-item fill="outline">
+<ion-textarea
+  placeholder="please write few words about your company histroy and business offerings"
+  [clearOnEdit]="true"></ion-textarea>
+  </ion-item>
 
   
 </form>
 
 
   <ion-button
-   class="ion-margin-horizontal"
+   class="ion-margin-horizontal" style="margin-top: 10rem;"
     
     expand="block" 
 

@@ -25,3 +25,46 @@ ion-content {
     display: flex;
     
 }
+
+
+
+.circle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .circle {
+  
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .circle-1 {
+  
+    position: absolute;
+    left: -23.42%;
+    right: 75.35%;
+    top: -2.04%;
+    bottom: 80.47%;
+    background-color: rgba(248, 150, 34, 0.27);
+    /* change this to the color you want */
+  }
+  
+  .circle-2 {
+    background-color: rgba(248, 150, 34, 0.27);
+    /* change this to the color you want */
+    position: absolute;
+    left: -2%;
+    right: 50.93%;
+    top: -11.48%;
+    bottom: 86.91%;
+  }
+
+  .company{
+    --background: #f58e26;
+  }

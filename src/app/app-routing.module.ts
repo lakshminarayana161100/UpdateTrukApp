@@ -155,7 +155,11 @@ const routes: Routes = [
   {
     path: 'attach-prefferd-newload',
     loadChildren: () => import('./attach-prefferd-newload/attach-prefferd-newload.module').then( m => m.AttachPrefferdNewloadPageModule)
+  },  {
+    path: 'get-started',
+    loadChildren: () => import('./get-started/get-started.module').then( m => m.GetStartedPageModule)
   },
+
   
 
 
