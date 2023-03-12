@@ -159,6 +159,22 @@ const routes: Routes = [
     path: 'get-started',
     loadChildren: () => import('./get-started/get-started.module').then( m => m.GetStartedPageModule)
   },
+  {
+    path: 'about-us',
+    loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
+  },
+  {
+    path: 'terms-conditions',
+    loadChildren: () => import('./terms-conditions/terms-conditions.module').then( m => m.TermsConditionsPageModule)
+  },
+  {
+    path: 'privacy-policy',
+    loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+  },
+  {
+    path: 'disclaimer',
+    loadChildren: () => import('./disclaimer/disclaimer.module').then( m => m.DisclaimerPageModule)
+  },
 
   
 
